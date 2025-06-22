@@ -243,7 +243,7 @@ MobileBERT, FinBERT, DeBERTa 세 가지 BERT 계열 모델을 fine-tuning 하고
 
 BERTopic 기반으로 모델 간 오답 토픽의 교집합을 추출한 결과,  
 다음과 같은 키워드들이 반복적으로 등장했다:
-![img_1.png](img_1.png)
+![img_1.png](https://raw.githubusercontent.com/minu2001/BERT_PROJECT/main/img_1.png)
 - `football`, `cup`, `rugby`, `league` 등 **스포츠 관련 키워드**
 - `obituary`, `death`, `old`, `children`, `year`, `time` 등 **비즈니스와 직접 관련 없는 일반 시사 키워드**
 - `israel`, `iran`, `korea`, `military`, `police`, `war` 등 **국제 분쟁 및 정치·안보 관련 키워드**
@@ -292,9 +292,9 @@ BERTopic 기반으로 모델 간 오답 토픽의 교집합을 추출한 결과,
 ---
 
 ### 📊 시각화 자료
-- `matched_keyword_topic_ratio.png`:  ![matched_keyword_topic_ratio.png](analysis/matched_keyword_topic_ratio.png)
+- `matched_keyword_topic_ratio.png`:  ![matched_keyword_topic_ratio.png](https://raw.githubusercontent.com/minu2001/BERT_PROJECT/main/analysis/matched_keyword_topic_ratio.png)
   → 모델별 오답 키워드가 원본 데이터의 토픽과 얼마나 겹치는지 시각적으로 표현  
-- `lda_topic_distribution_comparison.png`: ![lda_topic_distribution_comparison.png](analysis/lda_compare/lda_topic_distribution_comparison.png) 
+- `lda_topic_distribution_comparison.png`: ![lda_topic_distribution_comparison.png](https://raw.githubusercontent.com/minu2001/BERT_PROJECT/main/analysis/lda_compare/lda_topic_distribution_comparison.png) 
   → 원본 데이터 전체 토픽 분포와 오답 토픽의 상대적인 분포 비교
 
 ---
@@ -327,9 +327,9 @@ Confusion Matrix는 모델이 얼마나 정답을 잘 맞췄는지,
 
 | Model       | Confusion Matrix 시각화 |
 |-------------|--------------------------|
-| MobileBERT  | ![Confusion Matrix - MobileBERT](analysis/lda_compare/confusion_matrix_MobileBERT.png) |
-| FinBERT     | ![Confusion Matrix - FinBERT](analysis/lda_compare/confusion_matrix_FinBERT.png)       |
-| DeBERTa     | ![Confusion Matrix - DeBERTa](analysis/lda_compare/confusion_matrix_DeBERTa.png)       |
+| MobileBERT  | ![Confusion Matrix - MobileBERT](https://raw.githubusercontent.com/minu2001/BERT_PROJECT/main/analysis/lda_compare/confusion_matrix_MobileBERT.png) |
+| FinBERT     | ![Confusion Matrix - FinBERT](https://raw.githubusercontent.com/minu2001/BERT_PROJECT/main/analysis/lda_compare/confusion_matrix_FinBERT.png)       |
+| DeBERTa     | ![Confusion Matrix - DeBERTa](https://raw.githubusercontent.com/minu2001/BERT_PROJECT/main/analysis/lda_compare/confusion_matrix_DeBERTa.png)       |
 
 > ✅ MobileBERT는 부정(0)을 과도하게 예측하는 경향이 있었고,  
 > FinBERT는 상대적으로 긍정(1) 판단이 섬세했으나 recall이 낮았음.  
@@ -343,9 +343,9 @@ Precision, Recall, F1-score 지표를 통해 각 모델의 세부적인 성능�
 
 | Model       | Classification Report |
 |-------------|------------------------|
-| MobileBERT  | ![Classification Report - MobileBERT](analysis/lda_compare/classification_report_MobileBERT.png) |
-| FinBERT     | ![Classification Report - FinBERT](analysis/lda_compare/classification_report_FinBERT.png)       |
-| DeBERTa     | ![Classification Report - DeBERTa](analysis/lda_compare/classification_report_DeBERTa.png)       |
+| MobileBERT  | ![Classification Report - MobileBERT](https://raw.githubusercontent.com/minu2001/BERT_PROJECT/main/analysis/lda_compare/classification_report_MobileBERT.png) |
+| FinBERT     | ![Classification Report - FinBERT](https://raw.githubusercontent.com/minu2001/BERT_PROJECT/main/analysis/lda_compare/classification_report_FinBERT.png)       |
+| DeBERTa     | ![Classification Report - DeBERTa](https://raw.githubusercontent.com/minu2001/BERT_PROJECT/main/analysis/lda_compare/classification_report_DeBERTa.png)       |
 
 > 📌 DeBERTa는 모든 지표에서 가장 안정적인 성능을 보였으며,  
 > 특히 중립(2)에 대한 Precision과 Recall이 가장 높게 나타났다.
