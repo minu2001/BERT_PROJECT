@@ -327,9 +327,9 @@ Confusion Matrix는 모델이 얼마나 정답을 잘 맞췄는지,
 
 | Model       | Confusion Matrix 시각화 |
 |-------------|--------------------------|
-| MobileBERT  | ![Confusion Matrix - MobileBERT](./visuals/confusion_matrix_mobilebert.png) |
-| FinBERT     | ![Confusion Matrix - FinBERT](./visuals/confusion_matrix_finbert.png)       |
-| DeBERTa     | ![Confusion Matrix - DeBERTa](./visuals/confusion_matrix_deberta.png)       |
+| MobileBERT  | ![Confusion Matrix - MobileBERT](./analysis/lda_compare/confusion_matrix_mobilebert.png) |
+| FinBERT     | ![Confusion Matrix - FinBERT](./analysis/lda_compare/confusion_matrix_finbert.png)       |
+| DeBERTa     | ![Confusion Matrix - DeBERTa](./analysis/lda_compare/confusion_matrix_deberta.png)       |
 
 > ✅ MobileBERT는 부정(0)을 과도하게 예측하는 경향이 있었고,  
 > FinBERT는 상대적으로 긍정(1) 판단이 섬세했으나 recall이 낮았음.  
@@ -343,9 +343,9 @@ Precision, Recall, F1-score 지표를 통해 각 모델의 세부적인 성능�
 
 | Model       | Classification Report |
 |-------------|------------------------|
-| MobileBERT  | ![Classification Report - MobileBERT](./visuals/classification_report_mobilebert.png) |
-| FinBERT     | ![Classification Report - FinBERT](./visuals/classification_report_finbert.png)       |
-| DeBERTa     | ![Classification Report - DeBERTa](./visuals/classification_report_deberta.png)       |
+| MobileBERT  | ![Classification Report - MobileBERT](./analysis/lda_compare/classification_report_mobilebert.png) |
+| FinBERT     | ![Classification Report - FinBERT](./analysis/lda_compare/classification_report_finbert.png)       |
+| DeBERTa     | ![Classification Report - DeBERTa](./analysis/lda_compare/classification_report_deberta.png)       |
 
 > 📌 DeBERTa는 모든 지표에서 가장 안정적인 성능을 보였으며,  
 > 특히 중립(2)에 대한 Precision과 Recall이 가장 높게 나타났다.
