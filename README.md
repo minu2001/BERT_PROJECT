@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=shark&color=gradient&height=200&section=footer&text=BERT%20PROJECT&fontSize=100)
+![header](https://capsule-render.vercel.app/api?type=block&color=gradient&height=200&section=footer&text=BERT%20PROJECT&fontSize=100)
  
 
 ## 📌 1. 프로젝트 개요
