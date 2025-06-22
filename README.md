@@ -269,11 +269,11 @@ BERTopic 기반으로 모델 간 오답 토픽의 교집합을 추출한 결과,
 
 ### 📊 시각화 자료
 
-- ![Top 10 Topics]((analysis/topic_full/topic_word_scores.png))  
+- ![Top 10 Topics](analysis/topic_full/topic_word_scores.png)  
   → 상위 10개 주요 토픽의 빈도 분포 시각화  
-- ![Topic Clusters]((analysis/topic_full/topic_clusters.png))  
+- ![Topic Clusters](analysis/topic_full/topic_clusters.png)   
   → 토픽 간 유사도 기반 클러스터링 (2D)
-- ![Topic Heatmap]((analysis/topic_full/topic_heatmap.png))  
+- ![Topic Heatmap](analysis/topic_full/topic_heatmap.png)  
   → 토픽 간 키워드 유사도 히트맵
 
 모델의 오답 문장에서 자주 등장한 토픽들을 추출하여,  
