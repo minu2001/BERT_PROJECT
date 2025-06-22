@@ -441,3 +441,63 @@ Precision, Recall, F1-score 지표를 통해 각 모델의 세부적인 성능�
 > 실패한 접근도 끝까지 검증하며 이유를 분석했고, 이를 바탕으로 실전에서 쓸 수 있는 모델 구조를 제시한 점이 핵심이다.
 
 
+---
+### 파일 구조
+
+## 📁 프로젝트 파일 구조
+
+```plaintext
+📁 BERT_PROJECT/
+│
+├─ analysis/
+│  ├─ analyze_matched_keyword_ratio.py        # 원본 vs 오답 토픽 비율 비교
+│  ├─ compare_error_topic_overlap.py          # 모델 간 오답 토픽 겹침 분석
+│  ├─ confusion_report.py                     # confusion matrix 및 classification report 시각화
+│  ├─ extract_errors.py                       # 오답 샘플 추출
+│  ├─ matched_keyword_topic_ratio.csv/png     # 오답 vs 원본 토픽 키워드 비율 비교 자료
+│  ├─ topic_modeling_errors.py                # 오답 대상 BERTopic 수행
+│  ├─ topic_modeling_full_data.py             # 전체 원본 데이터 BERTopic 수행
+│  │
+│  ├─ lda_compare/
+│  │  ├─ classification_report_{Model}.png    # 모델별 classification report
+│  │  ├─ confusion_matrix_{Model}.png         # 모델별 confusion matrix
+│  │  ├─ lda_topic_distribution_comparison.png# 토픽 분포 비교 시각화
+│  │  └─ {Model}/
+│  │        ├─ topic_keywords.csv             # 모델별 오답 토픽 키워드
+│  │        └─ topic_examples.csv             # 모델별 오답 문장 예시
+│  │
+│  ├─ topic_errors/                           # 오답 문장 BERTopic 결과 저장 (선택)
+│  └─ topic_full/
+│      ├─ top10_barchart.html                 # 원본 데이터 토픽 상위 10개 시각화
+│      ├─ topic_clusters.html                 # 전체 클러스터 시각화
+│      ├─ topic_heatmap.html                  # 토픽 간 유사도 heatmap
+│      ├─ topic_summary.csv                   # 요약 정보
+│      ├─ topic_examples.csv                  # 대표 문장 예시
+│      └─ topic_full_data.csv                 # 전체 토픽 데이터
+│
+├─ data_file/
+│  ├─ finance_data.csv                        # 직접 라벨링한 3클래스 데이터
+│  ├─ finance_data_no.csv                     # 중립 제외 버전 (0/1)
+│  ├─ finance_with_preds.csv                  # 모델 예측 추가된 파일
+│  ├─ Sentiment_Stock_data.csv                # 원본 전체 데이터셋 (100k)
+│  ├─ Sentiment_Stock_data_30k.csv            # 30k 슬라이싱 버전
+│  ├─ stock_30k_full_predictions.csv          # 30k 데이터 모델별 예측 결과
+│  ├─ error_mobilebert.csv                    # MobileBERT 오답 데이터
+│  ├─ error_finbert.csv                       # FinBERT 오답 데이터
+│  └─ error_deberta.csv                       # DeBERTa 오답 데이터
+│
+├─ models/
+│  ├─ MobileBERT/
+│  │  ├─ MobileBERT-Finetune-GPU.py           # MobileBERT 학습 코드
+│  │  ├─ MobileBERT_Inference.py              # MobileBERT 추론 코드
+│
+│  ├─ FinBERT/
+│  │  ├─ FinBERT-Finetune-GPU.py              # FinBERT 학습 코드
+│  │  ├─ FinBERT_Inference.py                 # FinBERT 추론 코드
+│
+│  └─ DeBERTa/
+│     ├─ DeBERTa-Finetune-GPU.py              # DeBERTa 학습 코드
+│     ├─ DeBERTa_Inference.py                 # DeBERTa 추론 코드
+│
+├─ CompareModels.py                           # 모델 비교 및 평가 코드
+  
