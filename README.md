@@ -20,13 +20,14 @@
 
 감정 판단 기준은 단순 키워드가 아니라 **금융적인 맥락과 문장 흐름**을 중심으로 잡았으며,  
 클래스 간 데이터 불균형이 없도록 **세 클래스를 균형 있게 구성**했다.
+---
 #### 데이터 예시
 | Sentiment | Sentence                                                                                                                           |                               |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
 | positive  | "Circulation revenue has increased by 5 % in Finland and 4 % in Sweden in 2008 ."                                                  | **매출 증가라는 긍정적 사실을 전달하고 있어, 긍정 라벨이 타당함.** |
 | negative  | "\$SAP Q1 disappoints as #software licenses down. Real problem? #Cloud growth trails \$MSFT \$ORCL \$GOOG \$CRM \$ADBE"            | **실적 부진과 시장 우려를 표현하므로 부정으로 분류된 것이 적절함.** |
 | neutral   | "According to the Finnish-Russian Chamber of Commerce , all the major construction companies of Finland are operating in Russia ." | **단순 사실 전달로 감정이 드러나지 않아 중립 라벨이 적절함.**    |
-
+---
 이후, **이렇게 학습된 모델을 이용해 원본 데이터를 다시 평가**해보기로 했다.  
 그 과정에서 **직접 라벨링한 3클래스 데이터에서 중립(2)을 제외한 0/1 데이터만으로 MobileBERT를 학습**한 뒤,  
 30k 슬라이싱 원본 데이터에 예측을 수행해보았다.  
