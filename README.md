@@ -115,7 +115,7 @@ MobileBERT, FinBERT, DeBERTa 세 가지 BERT 계열 모델을 fine-tuning 하고
 | FinBERT    | 86.28%       |
 | DeBERTa    | 88.05%       |
 
-> ✅ *DeBERTa가 가장 높은 정확도를 보였으며, 세 모델 간 성능 차이는 크지 않지만 미세한 차이가 존재함.*
+>  *DeBERTa가 가장 높은 정확도를 보였으며, 세 모델 간 성능 차이는 크지 않지만 미세한 차이가 존재함.*
 ---
 
 
@@ -125,7 +125,7 @@ MobileBERT, FinBERT, DeBERTa 세 가지 BERT 계열 모델을 fine-tuning 하고
 
 ---
 
-### 🧩 모델별 "중립" 분류 비율 차이
+###  모델별 "중립" 분류 비율 차이
 
 | Model     | 전체 예측 수 | 중립으로 분류된 수 | 중립 비율 (%) |
 |-----------|---------------|----------------------|----------------|
@@ -205,7 +205,7 @@ MobileBERT, FinBERT, DeBERTa 세 가지 BERT 계열 모델을 fine-tuning 하고
 
 ## 📌 6. 오류 분석 및 토픽 모델링
 
-### 🎯 분석 목적
+###  분석 목적
 
 앞선 평가에서 세 모델(MobileBERT, FinBERT, DeBERTa)은 validation 정확도가 85%를 넘었음에도 불구하고,  
 원본 데이터에선 52~55% 수준의 낮은 성능을 보였습니다.  
@@ -250,7 +250,7 @@ MobileBERT, FinBERT, DeBERTa 세 가지 BERT 계열 모델을 fine-tuning 하고
 
 ---
 
-### 🔄 교차 비교: 공통적으로 어려워한 토픽
+###  교차 비교: 공통적으로 어려워한 토픽
 
 ### 📌 모델 간 공통 에러 토픽 분석
 
@@ -275,10 +275,10 @@ BERTopic 기반으로 모델 간 오답 토픽의 교집합을 추출한 결과,
 약 30,000개의 금융 뉴스 헤드라인(슬라이싱 데이터)을 기반으로 **BERTopic**을 활용해 전체 토픽을 분석하였다.  
 토픽 모델링 결과, 뉴스 헤드라인은 대체로 다음과 같은 **주요 키워드/주제**로 분류되었다:
 
-- ⚙ 산업 동향 (예: `company`, `market`, `million`, `business`)
-- 🌏 국제 정세 (예: `israel`, `iran`, `russia`, `china`)
-- 💹 증시 및 환율 관련 (예: `stock`, `price`, `yen`, `currency`)
-- ⚽ 스포츠 및 사회 이슈 (예: `football`, `rugby`, `police`, `obituary`)
+-  산업 동향 (예: `company`, `market`, `million`, `business`)
+-  국제 정세 (예: `israel`, `iran`, `russia`, `china`)
+-  증시 및 환율 관련 (예: `stock`, `price`, `yen`, `currency`)
+-  스포츠 및 사회 이슈 (예: `football`, `rugby`, `police`, `obituary`)
 
 ### 📊 시각화 자료
 
@@ -292,7 +292,7 @@ BERTopic 기반으로 모델 간 오답 토픽의 교집합을 추출한 결과,
 모델의 오답 문장에서 자주 등장한 토픽들을 추출하여,  
 **원본 슬라이싱 데이터(30K)** 전체에서 이 토픽들이 얼마나 많이 등장하는지 확인하였다.
 
-### 🔍 비교 지표: `matched_keyword_topic_ratio.csv`
+###  비교 지표: `matched_keyword_topic_ratio.csv`
 
 | 모델 조합               | 오답에서 공통된 토픽 수 | 원본 데이터 내 일치 문서 수 | 전체 대비 비율 (%) |
 |-------------------------|--------------------------|------------------------------|---------------------|
@@ -312,7 +312,7 @@ BERTopic 기반으로 모델 간 오답 토픽의 교집합을 추출한 결과,
 
 ---
 
-### ✅ 시사점
+###  시사점
 
 - **모델이 공통적으로 어려워했던 주제들이 원본 데이터에서도 많이 등장함**
 - 따라서 정확도 하락의 주요 원인은:
@@ -344,7 +344,7 @@ Confusion Matrix는 모델이 얼마나 정답을 잘 맞췄는지,
 | FinBERT     | ![Confusion Matrix - FinBERT](https://raw.githubusercontent.com/minu2001/BERT_PROJECT/main/analysis/lda_compare/confusion_matrix_FinBERT.png)       |
 | DeBERTa     | ![Confusion Matrix - DeBERTa](https://raw.githubusercontent.com/minu2001/BERT_PROJECT/main/analysis/lda_compare/confusion_matrix_DeBERTa.png)       |
 
-> ✅ MobileBERT는 부정(0)을 과도하게 예측하는 경향이 있었고,  
+>  MobileBERT는 부정(0)을 과도하게 예측하는 경향이 있었고,  
 > FinBERT는 상대적으로 긍정(1) 판단이 섬세했으나 recall이 낮았음.  
 > DeBERTa는 가장 균형 잡힌 예측을 보이며 F1-score 기준으로도 우수한 결과를 냄.
 
@@ -383,7 +383,7 @@ Precision, Recall, F1-score 지표를 통해 각 모델의 세부적인 성능�
   - MobileBERT는 경량화로 인해 미묘한 맥락 구분이 어려웠으며  
   - DeBERTa는 비교적 문맥을 잘 파악했으나 특정 이슈(예: 이스라엘, 북한 등)에는 취약했다.
 
-### 🧠 시사점
+###  시사점
 
 - **BERT 계열 모델이 문맥 기반이라 하더라도**,  
   금융 뉴스에서는 단어 하나의 직접적인 의미가 분류에 더 큰 영향을 주는 경우가 많았다.
@@ -410,7 +410,7 @@ Precision, Recall, F1-score 지표를 통해 각 모델의 세부적인 성능�
 
 ---
 
-### 🔄 방향성 변화 이후 진행 흐름
+###  방향성 변화 이후 진행 흐름
 
 1. **원본 데이터를 그대로 학습에 쓰는 대신**,  
    우선 중립(2)을 제거한 상태로 **MobileBERT 이진 분류 모델**을 임시로 학습시켰다.
@@ -449,7 +449,7 @@ Precision, Recall, F1-score 지표를 통해 각 모델의 세부적인 성능�
 ---
 
 
-> 💡 이 프로젝트는 단순한 모델 학습이 아니라,  
+>  이 프로젝트는 단순한 모델 학습이 아니라,  
 > **데이터의 품질 문제를 인식하고 그에 맞는 라벨링 전략과 분석 프레임을 스스로 설계한 실험적 접근**이었다.  
 > 실패한 접근도 끝까지 검증하며 이유를 분석했고, 이를 바탕으로 실전에서 쓸 수 있는 모델 구조를 제시한 점이 핵심이다.
 
